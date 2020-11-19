@@ -1,0 +1,88 @@
+/* colors */
+$main: #333;
+
+/* reset */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: $main;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a { text-decoration: none; }
+
+ul,li,ol {  list-style: none; }
+
+img { vertical-align: top; max-width: 100%; }
+
+/* custom styles */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* swipe slider */
+
+.slider-wrapper {
+  height: auto;
+  padding: 100px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  .slide-content {
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    .slide-title {
+      position: relative;
+      font-size: 32px;
+      color: red;
+      z-index: 1;
+    }
+    .slide-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}
